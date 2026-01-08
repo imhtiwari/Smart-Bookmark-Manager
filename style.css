@@ -1,0 +1,61 @@
+*{box-sizing:border-box;font-family:Segoe UI;}
+body{
+  min-height:100vh;
+  margin:0;
+  background:linear-gradient(270deg,#4b0da3,#00d4ff);
+  background-size:400% 400%;
+  animation:bg 12s ease infinite;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+}
+@keyframes bg{0%{background-position:0%}50%{background-position:100%}100%{background-position:0%}}
+
+.glass{
+  background:rgba(255,255,255,.15);
+  backdrop-filter:blur(12px);
+  border-radius:20px;
+  padding:20px 30px;
+  margin:10px;
+  width:min(95%,600px);
+  box-shadow:0 20px 40px rgba(0,0,0,.25);
+}
+
+.bookmark-form{
+  display:flex;
+  gap:10px;
+}
+input{
+  flex:1;
+  padding:10px;
+  border-radius:10px;
+  border:none;
+}
+button{
+  border:none;
+  padding:10px 16px;
+  border-radius:10px;
+  background:#00ffd5;
+  cursor:pointer;
+  font-weight:bold;
+}
+button:hover{transform:scale(1.05)}
+
+ul{list-style:none;padding:0;margin-top:10px}
+li{
+  background:rgba(255,255,255,.2);
+  padding:10px;
+  margin-bottom:8px;
+  border-radius:10px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  animation:fade .4s ease;
+}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1}}
+
+a{color:white;text-decoration:none}
+.search{margin:10px 0;width:100%}
+footer{text-align:center;font-size:.9rem}
